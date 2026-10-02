@@ -25,7 +25,6 @@ public class Attack extends Actor
         return this.power; 
     }
     public void act()
-    {
-        
+    { 
     }
 }
