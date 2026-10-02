@@ -19,16 +19,14 @@ public class User extends Actor
     public Pokemon getPokemon() {
         return this.pokemon; 
     }
-    public void switch() {
-        
+    public void switched() {
+        this.pokemon.getType();
     }
     public void heal() {
-        
+        pokemon.heal();
     }
-    public attack(String name, User enemy)  {
-        
+    public void attack(String name, User enemy)  {
     }
-    public void isEndGame() {
-        
+    public boolean isEndGame() {
     }
 }

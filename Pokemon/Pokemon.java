@@ -15,6 +15,13 @@ public class Pokemon extends Actor
     private boolean outStatus; 
     private Attack attack; 
     private String type; 
+    public Pokemon(int hp, int ap, String name, String atack, String type) {
+        this.hp = hp;
+        this.ap = ap; 
+        this.name = name; 
+        this.img = new GreenfootImage(name+".png");
+        setImage(this.img); 
+    }
     
     public String getType() {
     return this.type;
