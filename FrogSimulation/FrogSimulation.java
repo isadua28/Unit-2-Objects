@@ -11,7 +11,7 @@ public class FrogSimulation {
     public int hopDistance(){
         int hop = 0;
         hop = (int)(Math.random()*10)+1; 
-        if(Math.random()<0.1){
+        if(Math.random()>0.9){
             hop=-hop;
         }
         return hop;
@@ -20,7 +20,7 @@ public class FrogSimulation {
     public boolean simulate() {
         boolean result=false; 
         int start = 0;
-        for (int i=0; i<maxHops;i++) {
+        for (int i=0; i<maxHops; i++) {
             start = start+hopDistance(); 
             if (start<0) {
                 return false; 
@@ -29,12 +29,7 @@ public class FrogSimulation {
         return start>goalDistance; 
     }
     public double runSimulations(int num) {
-        int count=0;
-        for (int i=0; i<num; i++) {
-            if (simulate()) {
-                count++;
-            }
-        } 
+        double count = 0;
         return (double) count/num; 
     }
 }
