@@ -29,7 +29,12 @@ public class FrogSimulation {
         return start>goalDistance; 
     }
     public double runSimulations(int num) {
-        double count = 0;
+        int count=0;
+        for (int i=0; i<num; i++) {
+            if (simulate()) {
+                count++;
+            }
+        } 
         return (double) count/num; 
     }
 }
